@@ -33,13 +33,13 @@ const Tasks = (props) => {
                 <TouchableOpacity onPress={() => toggleOverlay()} style={styles.edit}>
                     <Icon 
                         name='edit'
-                        color='#232D3F'
+                        color='#67729D'
                     />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={props.delete} style={styles.edit}>
                     <Icon 
                         name='delete'
-                        color='#232D3F'
+                        color='#67729D'
                     />
                 </TouchableOpacity>
             </View>
@@ -69,7 +69,7 @@ const Tasks = (props) => {
 
 const styles = StyleSheet.create({
     item: {
-        backgroundColor: '#93B1A6',
+        backgroundColor: '#E7BCDE',
         padding: 15,
         borderRadius: 10,
         flexDirection: 'row',
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     square: {
         width: 24,
         height: 24,
-        backgroundColor: '#008170',
+        backgroundColor: 'white',
         opacity: 0.4,
         borderRadius: 5,
         marginRight: 15,
@@ -114,9 +114,9 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     oedit: {
-        color: "white",
+        color: "#FED9ED",
         fontWeight: "500",
-        backgroundColor: "#93B1A6",
+        backgroundColor: "#BB9CC0",
         borderWidth: 1,
         borderRadius: 5,
         margin: 10,

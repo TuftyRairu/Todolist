@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Keyboard, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { Overlay } from '@rneui/themed';
 import Tasks from './task';
+import { Icon } from '@rneui/base';
 
 const ToTask = () => {
     const [task, setTask] = useState();
@@ -26,20 +26,7 @@ const ToTask = () => {
     }
 
     return (
-        <View>
-            <KeyboardAvoidingView
-                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-                style={styles.writeTaskWrapper}
-            >
-                <TextInput style={styles.input} value={task} placeholder={'Write a Task'} onChangeText={text => setTask(text)}/>
-
-                <TouchableOpacity onPress={() => handleAddTask()}>
-                    <View style={styles.addWrapper}>
-                        <Text style={styles.addText}>+</Text>
-                    </View>
-                </TouchableOpacity>
-            </KeyboardAvoidingView>
-
+        <View style={{justifyContent:'space-between',height: '95%'}}>
             <View style={styles.items}>
             {/* items */}
             {
@@ -49,6 +36,19 @@ const ToTask = () => {
                 })
             }
             </View>
+
+            <KeyboardAvoidingView
+                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+                style={styles.writeTaskWrapper}
+            >
+                <TextInput style={styles.input} value={task} placeholder={'Write a Task'} onChangeText={text => setTask(text)}/>
+
+                <TouchableOpacity onPress={() => handleAddTask()}>
+                    <View style={styles.addWrapper}>
+                        <Text style={styles.addText}><Icon name='add' color='black'/></Text>
+                    </View>
+                </TouchableOpacity>
+            </KeyboardAvoidingView>
         </View>
     )
 }
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         marginTop: 30,
     },
     writeTaskWrapper: {
-        paddingTop: 30,
+        paddingTop: 20,
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'space-around',
@@ -67,20 +67,20 @@ const styles = StyleSheet.create({
     input: {
         paddingVertical: 10,
         paddingHorizontal: 18,
-        backgroundColor: '#93B1A6',
+        backgroundColor: '#E7BCDE',
         borderRadius: 5,
-        borderColor: '#84A7A1',
+        borderColor: '#BB9CC0',
         borderWidth: 1,
-        width: 250,
+        width: 270,
     },
     addWrapper: {
-        width: 60,
-        height: 60,
-        backgroundColor: '#93B1A6',
-        borderRadius: 90,
+        width: 55,
+        height: 55,
+        backgroundColor: '#E7BCDE',
+        borderRadius: 25,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#84A7A1',
+        borderColor: '#BB9CC0',
         borderWidth: 1,
     },
     addText: {

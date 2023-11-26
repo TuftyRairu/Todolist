@@ -15,7 +15,7 @@ export default function App() {
 
       <View style={styles.taskWrapper}>
 
-        <Text style={styles.sectionTitle}>Rairu's Today's Task</Text>
+        <Text style={styles.sectionTitle}>Shaira's Today's Task</Text>
 
         <ToTask />
 
@@ -28,7 +28,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#232D3F',
+    backgroundColor: '#67729D',
   },
   taskWrapper: {
     paddingTop: 80,
@@ -37,6 +37,6 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#FFF',
+    color: '#FED9ED',
   },
 });
